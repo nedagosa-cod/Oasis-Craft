@@ -1,0 +1,288 @@
+@charset "UTF-8";
+/* Tipografía */
+/* Parrafos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Se establece 1rem como 10px*/
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-size: 100%;
+  font-family: "Quicksand", sans-serif;
+  color: #292c35;
+  position: relative;
+}
+
+/* Evitamos problemas con las imagenes */
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  /* opcional */
+  -o-object-position: center center;
+  object-position: center center;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos */
+::-moz-selection {
+  background-color: #292c35;
+  color: #fff;
+}
+
+::selection {
+  background-color: #0000ee;
+  color: #fff;
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form,
+input,
+textarea,
+select,
+button,
+label {
+  hyphens: none;
+  font-family: inherit;
+  font-size: inherit;
+  /*background-color: transparent;
+  */
+  color: inherit;
+  display: block;
+  /*opcional*/ /*-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+*/
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+}
+
+/* Reseteamos las tablas */
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* (Probándolo, no usar en producción) En el caso de añadir una  */
+/* p svg{
+    display: inline;
+    width: initial;
+  } */
+/* Configuramos la tipografía para toda la web */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  font-size: 1.6rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 12px;
+  z-index: 1000;
+  color: #fff;
+}
+.navbar__bximg {
+  width: 60px;
+}
+.navbar__ulist {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+
+.parallax {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.parallax__layer img {
+  height: 100vh;
+}
+.parallax__layer--mountains {
+  z-index: 2;
+}
+.parallax__layer--lava {
+  z-index: 3;
+}
+.parallax__layer--floor {
+  z-index: 4;
+}
+.parallax__layer--tower {
+  z-index: 5;
+  transform: translate(0, 40px);
+  -webkit-transform: translate(0, 40px);
+  -moz-transform: translate(0, 40px);
+  -ms-transform: translate(0, 40px);
+  -o-transform: translate(0, 40px);
+}
+.parallax__layer--rock {
+  z-index: 6;
+}
+.parallax__layer--minirock {
+  z-index: 7;
+}
+
+.main {
+  width: 100%;
+  z-index: 100;
+  background: #ff846b;
+  font-size: 2rem;
+  position: relative;
+}
+.main::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to top, #dbdbdb, #ff2100);
+  z-index: 20;
+}
+
+.videobx {
+  position: relative;
+  width: 100%;
+  height: 200vh;
+  background: #dddddd;
+}
+.videobx__video {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+.videobx__text {
+  position: absolute;
+  z-index: 10;
+  width: 50%;
+  padding: 16px 60px;
+  top: 100px;
+  text-align: center;
+}
+.videobx__text h1 {
+  margin-bottom: 16px;
+  color: #ff2100;
+}
+.videobx__text p {
+  margin-bottom: 16px;
+  font-size: 2rem;
+}
+.videobx figure {
+  position: absolute;
+  bottom: 250px;
+  right: 55%;
+  width: 35%;
+  filter: drop-shadow(4px 4px 4px #ff2100);
+  -webkit-filter: drop-shadow(4px 4px 4px #ff2100);
+}
+
+.bigscene {
+  position: relative;
+  width: 100%;
+  height: 150vh;
+  background: linear-gradient(to top, #1d1d1d, #dbdbdb);
+}
+.bigscene__layers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+.bigscene__layers--starts {
+  z-index: 30;
+}
+.bigscene__layers--oasis {
+  width: 40%;
+}
+.bigscene__layers--craft {
+  width: 40%;
+}
+
+.swordscene {
+  height: 400vh;
+  background: #1d1d1d;
+  position: relative;
+}
+.swordscene__video {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+.swordscene::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to top, #1b1b1b, #242424);
+  z-index: 20;
+}
+
+.proto {
+  height: 100vh;
+  background: greenyellow;
+}
+
+/*# sourceMappingURL=styles.css.map */

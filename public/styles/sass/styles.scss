@@ -1,0 +1,168 @@
+@import 'variables';
+@import 'reset';
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    font-size: 1.6rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 12px;
+    z-index: 1000;
+    color: $w-color;
+    &__bximg {
+        width: 60px;
+    }
+    &__ulist {
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+    }
+}
+
+.parallax {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    &__layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        img{
+            height: 100vh;
+        }
+        &--mountains{
+            z-index: 2;
+        }
+        &--lava{
+            z-index: 3;
+        }
+        &--floor {
+            z-index: 4;
+        }
+        &--tower {
+            z-index: 5;
+            transform: translate(0, 40px);
+            -webkit-transform: translate(0, 40px);
+            -moz-transform: translate(0, 40px);
+            -ms-transform: translate(0, 40px);
+            -o-transform: translate(0, 40px);
+}
+        &--rock {
+            z-index: 6;
+        }
+        &--minirock{
+            z-index: 7;
+        }
+    }
+}
+
+.main {
+    width: 100%;
+    z-index: 100;
+    background: #ff846b;
+    font-size: 2rem;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(to top, #dbdbdb,#ff2100);
+        z-index: 20;
+    }
+}
+
+.videobx {
+    position: relative;
+    width: 100%;
+    height: 200vh;
+    background: #dddddd;
+    &__video{
+        position: sticky;
+        top: 0;
+        left: 0;
+        height: 100vh;
+    }
+    &__text {
+        position: absolute;
+        z-index: 10;
+        width: 50%;
+        padding: 16px 60px;
+        top: 100px;
+        text-align: center;
+        h1{
+            margin-bottom: 16px;
+            color: #ff2100;
+        }
+        p {
+            margin-bottom: 16px;
+            font-size: 2rem;
+        }
+    }
+    figure {
+        position: absolute;
+        bottom: 250px;
+        right: 55%;
+        width: 35%;
+        filter: drop-shadow(4px 4px 4px #ff2100);
+        -webkit-filter: drop-shadow(4px 4px 4px #ff2100);
+    }
+}
+
+.bigscene {
+    position: relative;
+    width: 100%;
+    height: 150vh;
+    background: linear-gradient(to top, #1d1d1d, #dbdbdb);
+    &__layers {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        &--starts {
+            z-index: 30;
+        }
+        &--oasis{
+            width: 40%;
+        }
+        &--craft {
+            width: 40%;
+        }
+    }
+}
+
+.swordscene {
+    height: 400vh;
+    background: #1d1d1d;
+    position: relative;
+    &__video {
+        position: sticky;
+        top: 0;
+        left: 0;
+        height: 100vh;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: -40px;
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(to top, #1b1b1b, #242424);
+        z-index: 20;
+    }
+}
+
+
+.proto{
+    height: 100vh;
+    background: greenyellow;;
+}
